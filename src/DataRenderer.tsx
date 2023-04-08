@@ -3,7 +3,7 @@ import { useEffect } from "react";
 // @ts-ignore
 import PropTypes from "prop-types";
 // @ts-ignore
-export default function List({
+export default function DataRenderer({
   // @ts-ignore
   component: Component,
   // @ts-ignore

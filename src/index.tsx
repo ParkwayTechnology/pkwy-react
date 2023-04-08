@@ -1,6 +1,6 @@
-import List from './List';
+import DataRenderer from './DataRenderer';
 // Credits:
 // https://blog.logrocket.com/the-complete-guide-to-publishing-a-react-package-to-npm/
 
 
-export {List}
+export {DataRenderer}

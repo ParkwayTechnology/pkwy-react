@@ -45,7 +45,7 @@ var __assign = function() {
 };
 
 // @ts-ignore
-function List(_a) {
+function DataRenderer(_a) {
     var 
     // @ts-ignore
     Component = _a.component, 
@@ -144,5 +144,5 @@ var styleProps = {
     }
 };
 
-exports.List = List;
+exports.DataRenderer = DataRenderer;
 //# sourceMappingURL=index.js.map
