@@ -48,7 +48,7 @@ var __assign = function() {
 function List(_a) {
     var 
     // @ts-ignore
-    Component = _a.renderItem, 
+    Component = _a.component, 
     // @ts-ignore
     header = _a.headerComponent, 
     // @ts-ignore
@@ -92,7 +92,7 @@ List.defaultProps = {
     sizing: false,
     styles: {},
     styleContainer: {},
-    renderItem: function () {
+    component: function () {
         return null;
     },
     headerComponent: function () {
@@ -144,7 +144,5 @@ var styleProps = {
     }
 };
 
-var index = { List: List };
-
-exports.default = index;
+exports.List = List;
 //# sourceMappingURL=index.js.map

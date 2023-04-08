@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 // @ts-ignore
 export default function List({
   // @ts-ignore
-  renderItem: Component,
+  component: Component,
   // @ts-ignore
   headerComponent: header,
   // @ts-ignore
@@ -73,7 +73,7 @@ List.defaultProps = {
   sizing: false,
   styles: {},
   styleContainer: {},
-  renderItem: () => {
+  component: () => {
     return null;
   },
   headerComponent: () => {

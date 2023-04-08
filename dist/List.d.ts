@@ -1,6 +1,6 @@
 /// <reference types="react" />
-export default function List({ renderItem: Component, headerComponent: header, data, row, flex, center, between, around, margin, styles, sizing, styleContainer }: {
-    renderItem: any;
+export default function List({ component: Component, headerComponent: header, data, row, flex, center, between, around, margin, styles, sizing, styleContainer }: {
+    component: any;
     headerComponent: any;
     data: any;
     row: any;
