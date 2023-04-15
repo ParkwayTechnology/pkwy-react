@@ -1,0 +1,36 @@
+.Logo {
+    font-size: 40px;  
+    font-family:Pacifico-Regular;
+    /* font-family:Fab-Felt; */
+    letter-spacing: 10;
+    color: #d9e3ea;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    text-decoration: none;
+}
+
+.Logo:hover{
+    color: #ccd5db;
+}
+
+.textStyle {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #d9e3ea;
+    margin: 0px 15px;
+    text-decoration: none;
+}
+
+.textStyle:hover {
+    text-decoration: none;
+    color: #b6bec4;
+}
+
+.textStyleLink{
+    text-decoration: none;
+}
+
+.textStyleLink:hover{
+    text-decoration: none;
+}
