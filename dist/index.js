@@ -33,6 +33,20 @@ MERCHANTABLITY OR NON-INFRINGEMENT.
 See the Apache Version 2.0 License for specific language governing permissions
 and limitations under the License.
 ***************************************************************************** */
+/* global Reflect, Promise */
+
+var extendStatics = function(d, b) {
+    extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return extendStatics(d, b);
+};
+
+function __extends(d, b) {
+    extendStatics(d, b);
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+}
 
 var __assign = function() {
     __assign = Object.assign || function __assign(t) {
@@ -159,6 +173,55 @@ function Navbar(props) {
                     React.createElement(button.Button, { label: "Sign in" }))))));
 }
 
+/**
+ * Component that alerts if you click outside of it
+ *  <OutsideAlerter Action ={props.setCardVisible}>
+ *  </OutsideAlerter>
+ */
+var OutsideAlerter = /** @class */ (function (_super) {
+    __extends(OutsideAlerter, _super);
+    function OutsideAlerter(props) {
+        var _this = _super.call(this, props) || this;
+        _this.setWrapperRef = _this.setWrapperRef.bind(_this);
+        _this.handleClickOutside = _this.handleClickOutside.bind(_this);
+        return _this;
+    }
+    OutsideAlerter.prototype.componentDidMount = function () {
+        document.addEventListener('mousedown', this.handleClickOutside);
+    };
+    OutsideAlerter.prototype.componentWillUnmount = function () {
+        document.removeEventListener('mousedown', this.handleClickOutside);
+    };
+    /**
+     * Set the wrapper ref
+     */
+    // @ts-ignore
+    OutsideAlerter.prototype.setWrapperRef = function (node) {
+        // @ts-ignore
+        this.wrapperRef = node;
+    };
+    /**
+     * Alert if clicked on outside of element
+     */
+    // @ts-ignore
+    OutsideAlerter.prototype.handleClickOutside = function (event) {
+        // @ts-ignore
+        if (this.wrapperRef && !this.wrapperRef.contains(event.target)) {
+            // @ts-ignore
+            this.props.Action(false);
+        }
+    };
+    OutsideAlerter.prototype.render = function () {
+        return React.createElement("div", { ref: this.setWrapperRef }, this.props.children);
+    };
+    return OutsideAlerter;
+}(React.Component));
+// @ts-ignore
+OutsideAlerter.propTypes = {
+    children: PropTypes.element.isRequired,
+};
+
 exports.DataRenderer = DataRenderer;
 exports.Navbar = Navbar;
+exports.OutsideAlerter = OutsideAlerter;
 //# sourceMappingURL=index.js.map
