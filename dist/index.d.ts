@@ -1,2 +1,3 @@
 import DataRenderer from './DataRenderer';
-export { DataRenderer };
+import Navbar from './Navbar/Navbar';
+export { DataRenderer, Navbar };

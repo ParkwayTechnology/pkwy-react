@@ -63,7 +63,7 @@ export default function DataRenderer({
   );
 }
 // @ts-ignore
-List.defaultProps = {
+DataRenderer.defaultProps = {
   row: false,
   center: false,
   flex: false,
@@ -82,7 +82,7 @@ List.defaultProps = {
   style: {}
 };
 // @ts-ignore
-List.propTypes = {
+DataRenderer.propTypes = {
   row: PropTypes.bool,
   sizing: PropTypes.bool,
   styles: PropTypes.object,

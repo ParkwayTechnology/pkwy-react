@@ -1,6 +1,6 @@
 {
   "name": "@pkwy/react",
-  "version": "1.0.4",
+  "version": "1.0.7",
   "description": "React Component Library",
   "main": "dist/index.js",
   "engines": {
@@ -23,6 +23,7 @@
     "prop-types": "^15.8.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "primereact": "^8.0.0",
     "rollup": "^1.29.0",
     "rollup-plugin-sass": "^1.2.2",
     "rollup-plugin-typescript2": "^0.25.3",
