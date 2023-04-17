@@ -5,4 +5,5 @@ export default function Navbar(props: {
     handleLogoClick: any;
     handleSignUpClick: any;
     handleSignInClick: any;
+    LogoComp: any;
 }): JSX.Element;

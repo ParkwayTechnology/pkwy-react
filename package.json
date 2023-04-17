@@ -1,6 +1,6 @@
 {
   "name": "@pkwy/react",
-  "version": "1.0.7",
+  "version": "1.0.9",
   "description": "React Component Library",
   "main": "dist/index.js",
   "engines": {

@@ -148,10 +148,13 @@ var styleProps = {
 ___$insertStyle(".Logo {\n  font-size: 40px;\n  font-family: Pacifico-Regular;\n  /* font-family:Fab-Felt; */\n  letter-spacing: 10;\n  color: #d9e3ea;\n  text-align: center;\n  margin-top: 100px;\n  margin-bottom: 100px;\n  text-decoration: none;\n}\n\n.Logo:hover {\n  color: #ccd5db;\n}\n\n.textStyle {\n  font-size: 1rem;\n  font-weight: 700;\n  color: #d9e3ea;\n  margin: 0px 15px;\n  text-decoration: none;\n}\n\n.textStyle:hover {\n  text-decoration: none;\n  color: #b6bec4;\n}\n\n.textStyleLink {\n  text-decoration: none;\n}\n\n.textStyleLink:hover {\n  text-decoration: none;\n}");
 
 function Navbar(props) {
+    var LogoComponent = props.LogoComp;
     return (React.createElement(React.Fragment, null,
         React.createElement("div", { className: "fluid-container", style: { backgroundColor: props.bgColor, color: "#d9e3ea", padding: "2.5% 5%", display: "flex", justifyContent: "space-between", alignItems: "center" } },
-            React.createElement("div", { style: { textDecoration: "none", fontSize: 30 }, onClick: props.handleLogoClick },
-                React.createElement("text", { className: "Logo" }, "Affy")),
+            React.createElement("div", { 
+                // style={{ textDecoration: "none", fontSize: 30 }}
+                onClick: props.handleLogoClick },
+                React.createElement(LogoComponent, __assign({}, props))),
             React.createElement("div", { style: { display: "flex", justifyContent: "center", alignItems: "center", height: "30px" } },
                 React.createElement("div", { className: "textStylediv", onClick: props.handleSignUpClick },
                     React.createElement("text", { className: "textStyle" }, "Sign up")),
